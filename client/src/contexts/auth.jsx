@@ -31,7 +31,10 @@ const AuthProvider = ({ children }) => {
 
   const register = async (data) => {
     try {
-      await axios.post("http://localhost:4000/auth/register", data);
+      await axios.post(
+        "https://home-service-app-czih.vercel.app/auth/register",
+        data
+      );
       navigate("/login");
     } catch (error) {
       return error;
@@ -40,10 +43,13 @@ const AuthProvider = ({ children }) => {
 
   const login = async ({ email, password }) => {
     try {
-      const response = await axios.post("http://localhost:4000/auth/login", {
-        email,
-        password,
-      });
+      const response = await axios.post(
+        "https://home-service-app-czih.vercel.app/auth/login",
+        {
+          email,
+          password,
+        }
+      );
       updateUserData(response.data);
       navigate("/");
     } catch (error) {
@@ -57,7 +63,7 @@ const AuthProvider = ({ children }) => {
 
   const logout = async () => {
     try {
-      await axios.post("http://localhost:4000/auth/logout");
+      await axios.post("https://home-service-app-czih.vercel.app/auth/logout");
       setUser(null);
       navigate("/");
     } catch (error) {

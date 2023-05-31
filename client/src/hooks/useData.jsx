@@ -9,7 +9,9 @@ const useData = () => {
 
   const getCategories = async () => {
     try {
-      const response = await axios.get("http://localhost:4000/data/categories");
+      const response = await axios.get(
+        "https://home-service-app-czih.vercel.app/data/categories"
+      );
       setItems(response.data);
     } catch (error) {
       console.error(error);
@@ -19,7 +21,7 @@ const useData = () => {
   const getCategory = async (param) => {
     try {
       const response = await axios.get(
-        "http://localhost:4000/data/categories/" + param
+        "https://home-service-app-czih.vercel.app/data/categories/" + param
       );
       setItemObjects(response.data);
     } catch (error) {
@@ -30,7 +32,7 @@ const useData = () => {
   const addCategory = async (data) => {
     try {
       const response = await axios.post(
-        "http://localhost:4000/data/categories",
+        "https://home-service-app-czih.vercel.app/data/categories",
         data
       );
       navigate("/categories");
@@ -43,7 +45,7 @@ const useData = () => {
   const editCategory = async (param, data) => {
     try {
       const response = await axios.put(
-        "http://localhost:4000/data/categories/" + param,
+        "https://home-service-app-czih.vercel.app/data/categories/" + param,
         data
       );
       navigate("/categories");
@@ -55,7 +57,7 @@ const useData = () => {
   const deleteCategory = async (param) => {
     try {
       const response = await axios.delete(
-        "http://localhost:4000/data/categories/" + param
+        "https://home-service-app-czih.vercel.app/data/categories/" + param
       );
       navigate("/categories");
     } catch (error) {
@@ -65,7 +67,9 @@ const useData = () => {
 
   const getServices = async () => {
     try {
-      const response = await axios.get("http://localhost:4000/data/services");
+      const response = await axios.get(
+        "https://home-service-app-czih.vercel.app/data/services"
+      );
       setItems(response.data);
     } catch (error) {
       console.error(error);
@@ -75,7 +79,7 @@ const useData = () => {
   const addService = async (formData) => {
     try {
       const response = await axios.post(
-        "http://localhost:4000/data/services",
+        "https://home-service-app-czih.vercel.app/data/services",
         formData,
         {
           headers: {
@@ -94,7 +98,7 @@ const useData = () => {
   const getService = async (param) => {
     try {
       const response = await axios.get(
-        "http://localhost:4000/data/services/" + param
+        "https://home-service-app-czih.vercel.app/data/services/" + param
       );
       const { services } = response.data[0];
       const result = response.data.map((item) => {
@@ -111,7 +115,7 @@ const useData = () => {
   const editService = async (param, formData) => {
     try {
       const response = await axios.put(
-        "http://localhost:4000/data/services/" + param,
+        "https://home-service-app-czih.vercel.app/data/services/" + param,
         formData,
         {
           headers: {
@@ -129,7 +133,7 @@ const useData = () => {
   const deleteService = async (id) => {
     try {
       const response = await axios.delete(
-        `http://localhost:4000/data/services/${id}`
+        `https://home-service-app-czih.vercel.app/data/services/${id}`
       );
       navigate("/services");
     } catch (error) {
@@ -140,7 +144,7 @@ const useData = () => {
   const addPayment = async (formData) => {
     try {
       const response = await axios.post(
-        "http://localhost:4000/data/services",
+        "https://home-service-app-czih.vercel.app/data/services",
         formData,
         {
           headers: {
@@ -157,7 +161,9 @@ const useData = () => {
 
   const getPromotions = async () => {
     try {
-      const response = await axios.get("http://localhost:4000/data/promotions");
+      const response = await axios.get(
+        "https://home-service-app-czih.vercel.app/data/promotions"
+      );
       setItems(response.data);
     } catch (error) {
       console.error(error);
@@ -167,7 +173,7 @@ const useData = () => {
   const addPromotion = async (promotionData) => {
     try {
       const response = await axios.post(
-        "http://localhost:4000/data/promotions",
+        "https://home-service-app-czih.vercel.app/data/promotions",
         promotionData
       );
       if (response?.data?.message === "Promotion code already exists.") {
@@ -186,7 +192,7 @@ const useData = () => {
   const getPromotion = async (param) => {
     try {
       const response = await axios.get(
-        "http://localhost:4000/data/promotions/" + param
+        "https://home-service-app-czih.vercel.app/data/promotions/" + param
       );
       setItemObjects(response);
       return response.data;
@@ -199,7 +205,7 @@ const useData = () => {
   const updatePromotion = async (promotionId, promotionData) => {
     try {
       const response = await axios.put(
-        `http://localhost:4000/data/promotions/${promotionId}`,
+        `https://home-service-app-czih.vercel.app/data/promotions/${promotionId}`,
         promotionData
       );
       navigate("/promotions");
@@ -215,7 +221,7 @@ const useData = () => {
   const deletePromotion = async (id) => {
     try {
       const response = await axios.delete(
-        `http://localhost:4000/data/promotions/${id}`
+        `https://home-service-app-czih.vercel.app/data/promotions/${id}`
       );
       navigate("/promotions");
     } catch (error) {

@@ -11,7 +11,9 @@ const useUser = () => {
 
   const homepageGetServices = async () => {
     try {
-      const response = await axios.get(`http://localhost:4000/user`);
+      const response = await axios.get(
+        `https://home-service-app-czih.vercel.app/user`
+      );
       setItems(response.data);
     } catch (error) {
       console.error(error);
@@ -29,7 +31,7 @@ const useUser = () => {
       // }
       // console.log(queryParams);
       const response = await axios.get(
-        `http://localhost:4000/user/services?keywords=${keywords}`
+        `https://home-service-app-czih.vercel.app/user/services?keywords=${keywords}`
       );
       setItems(response.data);
     } catch (error) {
@@ -41,7 +43,7 @@ const useUser = () => {
     async (profile_id) => {
       try {
         const response = await axios.get(
-          `http://localhost:4000/user/orders?profile_id=${profile_id}`
+          `https://home-service-app-czih.vercel.app/user/orders?profile_id=${profile_id}`
         );
         setItems(response.data);
       } catch (error) {
@@ -54,7 +56,7 @@ const useUser = () => {
   const addOrder = async (formData) => {
     try {
       const response = await axios.post(
-        "http://localhost:4000/user/orders",
+        "https://home-service-app-czih.vercel.app/user/orders",
         formData
       );
       return { success: true, message: "Add Order successfully!" };
@@ -70,7 +72,7 @@ const useUser = () => {
   const checkPromotion = async (promotionCode) => {
     try {
       const response = await axios.post(
-        "http://localhost:4000/user/check-promotion",
+        "https://home-service-app-czih.vercel.app/user/check-promotion",
         { promotionCode }
       );
       return {
@@ -85,7 +87,7 @@ const useUser = () => {
       return {
         valid: false,
         discount: 0,
-        message: error.response?.message
+        message: error.response?.message,
       };
     }
   };
