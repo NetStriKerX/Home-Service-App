@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <header className="bg-blue-100 px-[10%] py-20 w-screen relative">
+    <header className="bg-blue-100 px-[10%] py-20 w-full relative">
       <h1 className="text-blue-700 font-bold text-[64px]">
         เรื่องบ้าน...ให้เราช่วยดูแลคุณ
       </h1>

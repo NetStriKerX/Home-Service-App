@@ -3,7 +3,7 @@ import Footer from "../../components/Footer";
 
 const FooterHomepage = () => {
   return (
-    <footer className="h-[613px] w-screen">
+    <footer className="h-[613px] w-full">
       <div className="flex flex-col">
         <div className="bg-blue-600 h-[378px] relative">
           <div className="flex flex-row gap-28 ">

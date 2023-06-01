@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className="w-screen ">
+    <footer className="w-full ">
       <div className="flex flex-col">
         <div className="h-[193px]  flex  flex-row items-center justify-between gap-[10%] px-[10%]">
           <div className="flex flex-row gap-3">

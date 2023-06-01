@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function Service() {
   return (
-    <div className="bg-BG h-[790px] w-screen flex justify-center items-center flex-col space-y-12 ">
+    <div className="bg-BG h-[790px] w-full flex justify-center items-center flex-col space-y-12 ">
       <h1 className="text-3xl text-blue-950 font-sans font-bold">
         บริการยอดฮิตของเรา
       </h1>
