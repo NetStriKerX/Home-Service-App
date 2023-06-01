@@ -10,11 +10,7 @@ import ServiceMore from "./ServiceCard";
 export const HeaderService = () => {
   return (
     <header>
-      <img
-        src="public\images\banner.png"
-        alt="My service"
-        className=" w-screen"
-      />
+      <img src="images\banner.png" alt="My service" className=" w-screen" />
     </header>
   );
 };
@@ -91,7 +87,9 @@ export const NavService = ({ filter, setFilter }) => {
             <Form>
               <div className="flex w-full justify-center">
                 <div className="w-full flex justify-between ">
-                {loading && <div className="text-black bg-red">Loading...</div>}
+                  {loading && (
+                    <div className="text-black bg-red">Loading...</div>
+                  )}
                   <div>
                     <div className="w-[350px] flex items-center border rounded-lg overflow-hidden border-gray-300">
                       <div className="flex-shrink-0 px-4 py-2">
@@ -248,7 +246,6 @@ export const NavService = ({ filter, setFilter }) => {
               </div>
             </Form>
           </nav>
-          
         )}
       </Formik>
       <ServiceMore items={items} loading={loading} />

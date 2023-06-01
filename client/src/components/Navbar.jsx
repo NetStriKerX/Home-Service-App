@@ -24,8 +24,8 @@ const NavbarLeftContainer = () => {
           HomeServices
         </a>
       </div>
-      <Link to='/services'>
-        <div className="text-black text-[16px] pt-1 pl-[5%]">บริการของเรา</div>
+      <Link to="/services" className="text-black text-[16px] pt-1 pl-[5%]">
+        บริการของเรา
       </Link>
     </div>
   );
